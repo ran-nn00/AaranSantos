@@ -1,0 +1,66 @@
+.list-page{padding:60px 0 40px;}
+.list-back{display:inline-flex;align-items:center;gap:8px;color:var(--text-dim);font-size:14px;font-weight:600;margin-bottom:28px;}
+.list-back:hover{color:var(--text);}
+.activity-section{padding:50px 0;border-top:1px solid var(--card-border);}
+.activity-section:first-of-type{border-top:none;padding-top:0;}
+.activity-section h2{font-size:30px;font-weight:800;margin-bottom:8px;letter-spacing:-0.01em;}
+.activity-section > .container > p.section-sub{color:var(--text-dim);font-size:15px;margin-bottom:32px;}
+.list-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;}
+.list-card{
+  background:var(--card);border:1px solid var(--card-border);border-radius:14px;padding:24px;
+  transition:transform .2s,border-color .2s;
+}
+.list-card:hover{transform:translateY(-4px);border-color:var(--purple);}
+.list-card h4{font-size:16px;font-weight:700;margin-bottom:8px;}
+.list-card p{font-size:13.5px;color:var(--text-dim);line-height:1.6;}
+/* picture added to a list-card (currently used on Quiz 1) */
+/* height:auto + object-fit:contain shows the whole image instead of cropping it */
+.list-card-img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  border-radius:10px;
+  margin-bottom:16px;
+  display:block;
+}
+.jump-nav{display:flex;gap:10px;margin-bottom:50px;flex-wrap:wrap;}
+.jump-nav a{
+  font-size:13.5px;font-weight:600;color:var(--text-dim);border:1px solid var(--card-border);
+  padding:8px 16px;border-radius:999px;transition:.2s;
+}
+.jump-nav a:hover{color:var(--text);border-color:var(--purple);background:rgba(124,92,255,0.08);}
+
+/* makes it obvious the picture is clickable */
+.lightbox-trigger{cursor:zoom-in;}
+
+/* the popup that shows the full picture when clicked */
+.lightbox-overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(5,5,10,0.9);
+  z-index:1000;
+  align-items:center;
+  justify-content:center;
+  padding:40px;
+}
+.lightbox-overlay.open{display:flex;}
+.lightbox-img{
+  max-width:90vw;
+  max-height:90vh;
+  object-fit:contain;
+  border-radius:10px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.6);
+}
+.lightbox-close{
+  position:absolute;
+  top:24px;
+  right:32px;
+  background:none;
+  border:none;
+  color:#fff;
+  font-size:34px;
+  line-height:1;
+  cursor:pointer;
+}
+.lightbox-close:hover{color:var(--purple);}

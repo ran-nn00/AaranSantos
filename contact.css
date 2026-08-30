@@ -1,0 +1,56 @@
+/* ================= CONTACT PAGE STYLES ================= */
+/* Loaded on contact.html only, alongside the shared style.css */
+
+.contact-page{padding:70px 0;}
+.contact-page .container{max-width:1450px;}
+.contact-layout{display:grid;grid-template-columns:1.1fr 1fr;gap:90px;align-items:start;}
+.contact-copy h3{font-size:52px;font-weight:800;line-height:1.15;margin:14px 0 20px;letter-spacing:-0.01em;}
+.contact-copy > p{color:var(--text-dim);font-size:16px;line-height:1.7;margin-bottom:40px;max-width:460px;}
+.contact-detail{display:flex;align-items:center;gap:16px;margin-bottom:22px;}
+.detail-icon{
+  width:50px;height:50px;border-radius:50%;flex-shrink:0;
+  background:rgba(124,92,255,0.1);border:1px solid rgba(124,92,255,0.3);color:var(--purple);
+  display:flex;align-items:center;justify-content:center;
+}
+.detail-icon svg{width:20px;height:20px;}
+.detail-label{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-faint);font-weight:700;margin-bottom:4px;}
+.detail-value{display:block;font-size:16.5px;font-weight:600;color:var(--text);}
+
+.contact-form-card{
+  background:linear-gradient(180deg, var(--card), #0d0d1a);
+  border:1px solid var(--card-border);border-radius:22px;
+  padding:48px;position:relative;
+  box-shadow:0 0 0 1px rgba(124,92,255,0.08), 0 30px 80px rgba(0,0,0,0.35);
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.form-field{margin-bottom:22px;}
+.form-field label{
+  display:block;font-size:11.5px;font-weight:700;letter-spacing:.08em;
+  color:var(--text-faint);text-transform:uppercase;margin-bottom:10px;
+}
+.contact-form-card input, .contact-form-card select, .contact-form-card textarea{
+  width:100%;background:var(--bg);border:1px solid var(--card-border);border-radius:10px;
+  padding:15px 16px;color:var(--text);font-size:15px;font-family:inherit;
+}
+.contact-form-card select{
+  appearance:none;-webkit-appearance:none;cursor:pointer;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a3a3b8' stroke-width='2'><path d='M6 9l6 6 6-6'/></svg>");
+  background-repeat:no-repeat;background-position:right 16px center;background-size:18px;padding-right:40px;
+}
+.contact-form-card input:focus, .contact-form-card select:focus, .contact-form-card textarea:focus{outline:2px solid var(--purple);outline-offset:1px;}
+.contact-form-card textarea{resize:vertical;min-height:130px;}
+.btn-send{
+  width:100%;background:#fff;color:#0a0a14;border:none;padding:17px 0;border-radius:12px;
+  font-weight:700;font-size:15.5px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;
+  transition:transform .2s,box-shadow .2s;margin-top:6px;
+}
+.btn-send:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(255,255,255,0.15);}
+.form-msg{font-size:13.5px;margin-top:16px;color:#82e0aa;display:none;}
+
+@media (max-width:900px){
+  .contact-layout{grid-template-columns:1fr;}
+  .contact-copy h3{font-size:38px;}
+}
+@media (max-width:480px){
+  .form-row{grid-template-columns:1fr;}
+}
